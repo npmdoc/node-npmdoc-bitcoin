@@ -1,0 +1,2376 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/freewil/node-bitcoin#readme"
+
+    >bitcoin (v3.0.1)</a>
+</h1>
+<h4>Communicate with bitcoind via JSON-RPC</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.bitcoin">module bitcoin</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client">
+            function <span class="apidocSignatureSpan">bitcoin.</span>Client
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">bitcoin.</span>Client.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">bitcoin.</span>jsonrpc</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.bitcoin.Client">module bitcoin.Client</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.Client">
+            function <span class="apidocSignatureSpan">bitcoin.</span>Client
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.bitcoin.Client.prototype">module bitcoin.Client.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.addMultiSigAddress">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>addMultiSigAddress
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.addNode">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>addNode
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.backupWallet">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>backupWallet
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.cmd">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>cmd
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.createMultiSig">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>createMultiSig
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.createRawTransaction">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>createRawTransaction
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.decodeRawTransaction">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>decodeRawTransaction
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.decodeScript">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>decodeScript
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.dumpPrivKey">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>dumpPrivKey
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.dumpWallet">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>dumpWallet
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.encryptWallet">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>encryptWallet
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.estimateFee">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>estimateFee
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.estimatePriority">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>estimatePriority
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.generate">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>generate
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.getAccount">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getAccount
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.getAccountAddress">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getAccountAddress
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.getAddedNodeInfo">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getAddedNodeInfo
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.getAddressesByAccount">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getAddressesByAccount
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.getBalance">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getBalance
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.getBestBlockHash">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getBestBlockHash
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.getBlock">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getBlock
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.getBlockCount">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getBlockCount
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.getBlockHash">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getBlockHash
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.getBlockTemplate">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getBlockTemplate
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.getBlockchainInfo">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getBlockchainInfo
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.getChainTips">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getChainTips
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.getConnectionCount">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getConnectionCount
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.getDifficulty">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getDifficulty
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.getGenerate">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getGenerate
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.getInfo">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getInfo
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.getMempoolInfo">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getMempoolInfo
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.getMiningInfo">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getMiningInfo
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.getNetTotals">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getNetTotals
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.getNetworkHashPs">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getNetworkHashPs
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.getNetworkInfo">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getNetworkInfo
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.getNewAddress">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getNewAddress
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.getPeerInfo">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getPeerInfo
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.getRawChangeAddress">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getRawChangeAddress
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.getRawMemPool">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getRawMemPool
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.getRawTransaction">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getRawTransaction
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.getReceivedByAccount">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getReceivedByAccount
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.getReceivedByAddress">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getReceivedByAddress
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.getTransaction">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getTransaction
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.getTxOut">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getTxOut
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.getTxOutProof">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getTxOutProof
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.getTxOutSetInfo">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getTxOutSetInfo
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.getUnconfirmedBalance">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getUnconfirmedBalance
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.getWalletInfo">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getWalletInfo
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.help">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>help
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.importAddress">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>importAddress
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.importPrivKey">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>importPrivKey
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.importWallet">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>importWallet
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.keyPoolRefill">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>keyPoolRefill
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.keypoolRefill">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>keypoolRefill
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.listAccounts">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>listAccounts
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.listAddressGroupings">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>listAddressGroupings
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.listLockUnspent">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>listLockUnspent
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.listReceivedByAccount">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>listReceivedByAccount
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.listReceivedByAddress">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>listReceivedByAddress
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.listSinceBlock">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>listSinceBlock
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.listTransactions">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>listTransactions
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.listUnspent">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>listUnspent
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.lockUnspent">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>lockUnspent
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.move">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>move
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.ping">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>ping
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.prioritiseTransaction">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>prioritiseTransaction
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.sendFrom">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>sendFrom
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.sendMany">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>sendMany
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.sendRawTransaction">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>sendRawTransaction
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.sendToAddress">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>sendToAddress
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.setAccount">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>setAccount
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.setGenerate">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>setGenerate
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.setTxFee">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>setTxFee
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.signMessage">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>signMessage
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.signRawTransaction">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>signRawTransaction
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.stop">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>stop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.submitBlock">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>submitBlock
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.validateAddress">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>validateAddress
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.verifyChain">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>verifyChain
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.verifyMessage">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>verifyMessage
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.verifyTxOutProof">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>verifyTxOutProof
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.walletLock">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>walletLock
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.walletPassphrase">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>walletPassphrase
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.Client.prototype.walletPassphraseChange">
+            function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>walletPassphraseChange
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.bitcoin.jsonrpc">module bitcoin.jsonrpc</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.bitcoin.jsonrpc.Client">
+            function <span class="apidocSignatureSpan">bitcoin.jsonrpc.</span>Client
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.bitcoin" id="apidoc.module.bitcoin">module bitcoin</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client" id="apidoc.element.bitcoin.Client">
+        function <span class="apidocSignatureSpan">bitcoin.</span>Client
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Client(opts) {
+  this.rpc = new rpc.Client(opts)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+`npm install bitcoin`
+
+## Examples
+
+### Create client
+```js
+// all config options are optional
+var client = new bitcoin.<span class="apidocCodeKeywordSpan">Client</span>({
+  host: &#x27;localhost&#x27;,
+  port: 8332,
+  user: &#x27;username&#x27;,
+  pass: &#x27;password&#x27;,
+  timeout: 30000
+});
+```
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.bitcoin.Client" id="apidoc.module.bitcoin.Client">module bitcoin.Client</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.Client" id="apidoc.element.bitcoin.Client.Client">
+        function <span class="apidocSignatureSpan">bitcoin.</span>Client
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Client(opts) {
+  this.rpc = new rpc.Client(opts)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+`npm install bitcoin`
+
+## Examples
+
+### Create client
+```js
+// all config options are optional
+var client = new bitcoin.<span class="apidocCodeKeywordSpan">Client</span>({
+  host: &#x27;localhost&#x27;,
+  port: 8332,
+  user: &#x27;username&#x27;,
+  pass: &#x27;password&#x27;,
+  timeout: 30000
+});
+```
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.bitcoin.Client.prototype" id="apidoc.module.bitcoin.Client.prototype">module bitcoin.Client.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.addMultiSigAddress" id="apidoc.element.bitcoin.Client.prototype.addMultiSigAddress">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>addMultiSigAddress
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addMultiSigAddress = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.addNode" id="apidoc.element.bitcoin.Client.prototype.addNode">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>addNode
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addNode = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.backupWallet" id="apidoc.element.bitcoin.Client.prototype.backupWallet">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>backupWallet
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">backupWallet = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.cmd" id="apidoc.element.bitcoin.Client.prototype.cmd">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>cmd
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cmd = function () {
+  var args = [].slice.call(arguments)
+  var cmd = args.shift()
+
+  callRpc(cmd, args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if (err) return console.log(err);
+  console.log(&#x27;Balance:&#x27;, balance);
+});
+```
+### Getting the balance directly using `cmd`
+
+```js
+client.<span class="apidocCodeKeywordSpan">cmd</span>(&#x27;getbalance&#x27;, &#x27;*&#x27;, 6, function(err, balance, resHeaders
+){
+  if (err) return console.log(err);
+  console.log(&#x27;Balance:&#x27;, balance);
+});
+```
+
+### Batch multiple RPC calls into single HTTP request
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.createMultiSig" id="apidoc.element.bitcoin.Client.prototype.createMultiSig">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>createMultiSig
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createMultiSig = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.createRawTransaction" id="apidoc.element.bitcoin.Client.prototype.createRawTransaction">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>createRawTransaction
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createRawTransaction = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.decodeRawTransaction" id="apidoc.element.bitcoin.Client.prototype.decodeRawTransaction">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>decodeRawTransaction
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">decodeRawTransaction = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.decodeScript" id="apidoc.element.bitcoin.Client.prototype.decodeScript">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>decodeScript
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">decodeScript = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.dumpPrivKey" id="apidoc.element.bitcoin.Client.prototype.dumpPrivKey">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>dumpPrivKey
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">dumpPrivKey = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.dumpWallet" id="apidoc.element.bitcoin.Client.prototype.dumpWallet">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>dumpWallet
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">dumpWallet = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.encryptWallet" id="apidoc.element.bitcoin.Client.prototype.encryptWallet">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>encryptWallet
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">encryptWallet = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.estimateFee" id="apidoc.element.bitcoin.Client.prototype.estimateFee">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>estimateFee
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">estimateFee = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.estimatePriority" id="apidoc.element.bitcoin.Client.prototype.estimatePriority">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>estimatePriority
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">estimatePriority = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.generate" id="apidoc.element.bitcoin.Client.prototype.generate">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>generate
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">generate = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.getAccount" id="apidoc.element.bitcoin.Client.prototype.getAccount">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getAccount
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getAccount = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.getAccountAddress" id="apidoc.element.bitcoin.Client.prototype.getAccountAddress">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getAccountAddress
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getAccountAddress = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.getAddedNodeInfo" id="apidoc.element.bitcoin.Client.prototype.getAddedNodeInfo">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getAddedNodeInfo
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getAddedNodeInfo = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.getAddressesByAccount" id="apidoc.element.bitcoin.Client.prototype.getAddressesByAccount">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getAddressesByAccount
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getAddressesByAccount = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.getBalance" id="apidoc.element.bitcoin.Client.prototype.getBalance">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getBalance
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getBalance = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  timeout: 30000
+});
+```
+
+### Get balance across all accounts with minimum confirmations of 6
+
+```js
+client.<span class="apidocCodeKeywordSpan">getBalance</span>(&#x27;*&#x27;, 6, function(err, balance, resHeaders) {
+  if (err) return console.log(err);
+  console.log(&#x27;Balance:&#x27;, balance);
+});
+```
+### Getting the balance directly using `cmd`
+
+```js
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.getBestBlockHash" id="apidoc.element.bitcoin.Client.prototype.getBestBlockHash">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getBestBlockHash
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getBestBlockHash = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.getBlock" id="apidoc.element.bitcoin.Client.prototype.getBlock">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getBlock
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getBlock = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.getBlockCount" id="apidoc.element.bitcoin.Client.prototype.getBlockCount">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getBlockCount
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getBlockCount = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.getBlockHash" id="apidoc.element.bitcoin.Client.prototype.getBlockHash">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getBlockHash
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getBlockHash = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.getBlockTemplate" id="apidoc.element.bitcoin.Client.prototype.getBlockTemplate">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getBlockTemplate
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getBlockTemplate = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.getBlockchainInfo" id="apidoc.element.bitcoin.Client.prototype.getBlockchainInfo">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getBlockchainInfo
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getBlockchainInfo = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.getChainTips" id="apidoc.element.bitcoin.Client.prototype.getChainTips">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getChainTips
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getChainTips = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.getConnectionCount" id="apidoc.element.bitcoin.Client.prototype.getConnectionCount">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getConnectionCount
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getConnectionCount = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.getDifficulty" id="apidoc.element.bitcoin.Client.prototype.getDifficulty">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getDifficulty
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getDifficulty = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.getGenerate" id="apidoc.element.bitcoin.Client.prototype.getGenerate">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getGenerate
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getGenerate = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.getInfo" id="apidoc.element.bitcoin.Client.prototype.getInfo">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getInfo
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getInfo = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.getMempoolInfo" id="apidoc.element.bitcoin.Client.prototype.getMempoolInfo">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getMempoolInfo
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getMempoolInfo = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.getMiningInfo" id="apidoc.element.bitcoin.Client.prototype.getMiningInfo">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getMiningInfo
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getMiningInfo = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.getNetTotals" id="apidoc.element.bitcoin.Client.prototype.getNetTotals">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getNetTotals
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getNetTotals = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.getNetworkHashPs" id="apidoc.element.bitcoin.Client.prototype.getNetworkHashPs">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getNetworkHashPs
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getNetworkHashPs = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.getNetworkInfo" id="apidoc.element.bitcoin.Client.prototype.getNetworkInfo">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getNetworkInfo
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getNetworkInfo = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.getNewAddress" id="apidoc.element.bitcoin.Client.prototype.getNewAddress">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getNewAddress
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getNewAddress = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.getPeerInfo" id="apidoc.element.bitcoin.Client.prototype.getPeerInfo">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getPeerInfo
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getPeerInfo = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.getRawChangeAddress" id="apidoc.element.bitcoin.Client.prototype.getRawChangeAddress">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getRawChangeAddress
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getRawChangeAddress = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.getRawMemPool" id="apidoc.element.bitcoin.Client.prototype.getRawMemPool">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getRawMemPool
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getRawMemPool = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.getRawTransaction" id="apidoc.element.bitcoin.Client.prototype.getRawTransaction">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getRawTransaction
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getRawTransaction = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.getReceivedByAccount" id="apidoc.element.bitcoin.Client.prototype.getReceivedByAccount">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getReceivedByAccount
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getReceivedByAccount = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.getReceivedByAddress" id="apidoc.element.bitcoin.Client.prototype.getReceivedByAddress">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getReceivedByAddress
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getReceivedByAddress = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.getTransaction" id="apidoc.element.bitcoin.Client.prototype.getTransaction">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getTransaction
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getTransaction = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.getTxOut" id="apidoc.element.bitcoin.Client.prototype.getTxOut">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getTxOut
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getTxOut = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.getTxOutProof" id="apidoc.element.bitcoin.Client.prototype.getTxOutProof">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getTxOutProof
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getTxOutProof = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.getTxOutSetInfo" id="apidoc.element.bitcoin.Client.prototype.getTxOutSetInfo">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getTxOutSetInfo
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getTxOutSetInfo = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.getUnconfirmedBalance" id="apidoc.element.bitcoin.Client.prototype.getUnconfirmedBalance">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getUnconfirmedBalance
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getUnconfirmedBalance = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.getWalletInfo" id="apidoc.element.bitcoin.Client.prototype.getWalletInfo">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>getWalletInfo
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getWalletInfo = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.help" id="apidoc.element.bitcoin.Client.prototype.help">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>help
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">help = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.importAddress" id="apidoc.element.bitcoin.Client.prototype.importAddress">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>importAddress
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">importAddress = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.importPrivKey" id="apidoc.element.bitcoin.Client.prototype.importPrivKey">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>importPrivKey
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">importPrivKey = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.importWallet" id="apidoc.element.bitcoin.Client.prototype.importWallet">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>importWallet
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">importWallet = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.keyPoolRefill" id="apidoc.element.bitcoin.Client.prototype.keyPoolRefill">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>keyPoolRefill
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">keyPoolRefill = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.keypoolRefill" id="apidoc.element.bitcoin.Client.prototype.keypoolRefill">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>keypoolRefill
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">keypoolRefill = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.listAccounts" id="apidoc.element.bitcoin.Client.prototype.listAccounts">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>listAccounts
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">listAccounts = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.listAddressGroupings" id="apidoc.element.bitcoin.Client.prototype.listAddressGroupings">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>listAddressGroupings
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">listAddressGroupings = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.listLockUnspent" id="apidoc.element.bitcoin.Client.prototype.listLockUnspent">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>listLockUnspent
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">listLockUnspent = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.listReceivedByAccount" id="apidoc.element.bitcoin.Client.prototype.listReceivedByAccount">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>listReceivedByAccount
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">listReceivedByAccount = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.listReceivedByAddress" id="apidoc.element.bitcoin.Client.prototype.listReceivedByAddress">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>listReceivedByAddress
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">listReceivedByAddress = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.listSinceBlock" id="apidoc.element.bitcoin.Client.prototype.listSinceBlock">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>listSinceBlock
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">listSinceBlock = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.listTransactions" id="apidoc.element.bitcoin.Client.prototype.listTransactions">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>listTransactions
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">listTransactions = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.listUnspent" id="apidoc.element.bitcoin.Client.prototype.listUnspent">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>listUnspent
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">listUnspent = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.lockUnspent" id="apidoc.element.bitcoin.Client.prototype.lockUnspent">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>lockUnspent
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lockUnspent = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.move" id="apidoc.element.bitcoin.Client.prototype.move">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>move
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">move = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.ping" id="apidoc.element.bitcoin.Client.prototype.ping">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>ping
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ping = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.prioritiseTransaction" id="apidoc.element.bitcoin.Client.prototype.prioritiseTransaction">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>prioritiseTransaction
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">prioritiseTransaction = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.sendFrom" id="apidoc.element.bitcoin.Client.prototype.sendFrom">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>sendFrom
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sendFrom = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.sendMany" id="apidoc.element.bitcoin.Client.prototype.sendMany">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>sendMany
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sendMany = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.sendRawTransaction" id="apidoc.element.bitcoin.Client.prototype.sendRawTransaction">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>sendRawTransaction
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sendRawTransaction = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.sendToAddress" id="apidoc.element.bitcoin.Client.prototype.sendToAddress">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>sendToAddress
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sendToAddress = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.setAccount" id="apidoc.element.bitcoin.Client.prototype.setAccount">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>setAccount
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setAccount = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.setGenerate" id="apidoc.element.bitcoin.Client.prototype.setGenerate">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>setGenerate
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setGenerate = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.setTxFee" id="apidoc.element.bitcoin.Client.prototype.setTxFee">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>setTxFee
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setTxFee = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.signMessage" id="apidoc.element.bitcoin.Client.prototype.signMessage">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>signMessage
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">signMessage = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.signRawTransaction" id="apidoc.element.bitcoin.Client.prototype.signRawTransaction">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>signRawTransaction
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">signRawTransaction = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.stop" id="apidoc.element.bitcoin.Client.prototype.stop">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>stop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stop = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.submitBlock" id="apidoc.element.bitcoin.Client.prototype.submitBlock">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>submitBlock
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">submitBlock = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.validateAddress" id="apidoc.element.bitcoin.Client.prototype.validateAddress">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>validateAddress
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">validateAddress = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.verifyChain" id="apidoc.element.bitcoin.Client.prototype.verifyChain">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>verifyChain
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">verifyChain = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.verifyMessage" id="apidoc.element.bitcoin.Client.prototype.verifyMessage">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>verifyMessage
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">verifyMessage = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.verifyTxOutProof" id="apidoc.element.bitcoin.Client.prototype.verifyTxOutProof">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>verifyTxOutProof
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">verifyTxOutProof = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.walletLock" id="apidoc.element.bitcoin.Client.prototype.walletLock">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>walletLock
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">walletLock = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.walletPassphrase" id="apidoc.element.bitcoin.Client.prototype.walletPassphrase">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>walletPassphrase
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">walletPassphrase = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.Client.prototype.walletPassphraseChange" id="apidoc.element.bitcoin.Client.prototype.walletPassphraseChange">
+        function <span class="apidocSignatureSpan">bitcoin.Client.prototype.</span>walletPassphraseChange
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">walletPassphraseChange = function () {
+  var args = [].slice.call(arguments)
+  callRpc(commands[protoFn], args, this.rpc)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.bitcoin.jsonrpc" id="apidoc.module.bitcoin.jsonrpc">module bitcoin.jsonrpc</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.bitcoin.jsonrpc.Client" id="apidoc.element.bitcoin.jsonrpc.Client">
+        function <span class="apidocSignatureSpan">bitcoin.jsonrpc.</span>Client
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Client = function (opts) {
+  this.opts = opts || {}
+  this.http = this.opts.ssl ? https : http
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+`npm install bitcoin`
+
+## Examples
+
+### Create client
+```js
+// all config options are optional
+var client = new bitcoin.<span class="apidocCodeKeywordSpan">Client</span>({
+  host: &#x27;localhost&#x27;,
+  port: 8332,
+  user: &#x27;username&#x27;,
+  pass: &#x27;password&#x27;,
+  timeout: 30000
+});
+```
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
