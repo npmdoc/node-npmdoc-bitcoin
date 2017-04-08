@@ -3,7 +3,7 @@
 
 [![NPM](https://nodei.co/npm/bitcoin.png?downloads=true)](https://www.npmjs.com/package/bitcoin)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-bitcoin/build/screenCapture.buildNpmdoc.browser.%2Fhome%2Ftravis%2Fbuild%2Fnpmdoc%2Fnode-npmdoc-bitcoin%2Ftmp%2Fbuild%2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-bitcoin/build/apidoc.html)
+[![apidoc](https://npmdoc.github.io/node-npmdoc-bitcoin/build/screenCapture.buildApidoc.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmdoc%252Fnode-npmdoc-bitcoin%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-bitcoin/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-bitcoin/build/screenCapture.npmPackageListing.svg)
 
